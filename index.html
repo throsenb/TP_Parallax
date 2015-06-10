@@ -29,11 +29,11 @@
 	<script src="js/flowtype.js"></script>
 
 	<!-- Scroll Magic 	-->
-	<!-- ## CDN VERSION:  
+ 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 	
-
+	
 	<link rel="stylesheet" href="css/scrollmagic/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/scrollmagic/style.css" type="text/css">
 	<link rel="stylesheet" href="css/scrollmagic/examples.css" type="text/css">
@@ -46,11 +46,11 @@
 	<script type="text/javascript" src="js/scrollmagic/core/uncompressed/plugins/animation.gsap.js"></script>
 	<script type="text/javascript" src="js/scrollmagic/core/uncompressed/plugins/debug.addIndicators.js"></script>
 	
-	-->	
+	
 
 
   </head>
-<body id="pinContainer">
+<body id="pinContainer" >
 	<script>
 
 	var controller = new ScrollMagic.Controller();
@@ -59,18 +59,22 @@
 		<div class="container-fluid" id="homeHero">
 			<div class="container">
 				<img src="img/trueparallel_logo.png" class="pull-left zone2" id="logo">
-				<h3 class="pull-right">Are We On Your Parallel?</h3>
-				<img src="img/arrows.png" class="pull-right zone2">
+				<div class="pull-right zone2">
+					<h3 class="">Are We On Your Parallel?</h3>
+					<img src="img/arrows.png">
+				</div>	
+
 
 				<div class="row panel1 zone2">
 					<div id="modal" class="col-md-8 col-md-offset-2 ">
-						<div id="logo-slider" class="center-block">
+						<div id="logo-slider" class="pull-left">
 							<img src="img/blueBar.jpg">
 							<img src="img/orangeBar.jpg" class="logoSliding">
-						</div>							
-						<h1 class=" cursive">Our Future</h1>
-						<h1 class="">Parallels Yours</h1>
-
+						</div>			
+						<div class="pull-left tagline">				
+							<h1 class="cursive ">Our Future</h1>
+							<h1 class="">Parallels Yours</h1>
+						</div>
 					</div>
 				</div>
 
@@ -78,19 +82,19 @@
 
 			<div class="row">	
 				<div id="homeHeroXY">
-					<div class="layer" data-depth=".5" id="heroImage">
+					<div class="layer" data-depth=".2" id="heroImage">
 						<img class="center-block" src="img/home/hero/trueparallel-hero-crop.png">
 					</div>
 
-					<div class="row" id="LogoPattern">
+					<div id="LogoPattern">
 						<div class="col-xs-6">
 							<div class="layer" data-depth="1">
 								<img class="center-block" src="img/TP_pattern.png">
 							</div>						
 						</div>
 						<div class="col-xs-6">
-							<div class="layer" data-depth=".5">
-								<img class="pull-right" src="img/TP_pattern.png">
+							<div class="layer" data-depth=".75">
+								<img class="center-block" src="img/TP_pattern.png">
 							</div>							
 						</div>
 					</div>		
@@ -265,10 +269,10 @@
 	  calibrateY: true,
 	  invertX: true,
 	  invertY: true,
-	  limitX: 100,
-	  limitY: 100,
-	  scalarX: 40,
-	  scalarY: 40,
+	  limitX: 50,
+	  limitY: 50,
+	  scalarX: 5,
+	  scalarY: 5,
 	  frictionX: .5,
 	  frictionY: .5,
 	  originX: 0.5,
@@ -283,9 +287,9 @@
 	  invertX: true,
 	  invertY: true,
 	  limitX: 0,
-	  limitY: 580,
+	  limitY: 10,
 	  scalarX: 40,
-	  scalarY: 380,
+	  scalarY: 10,
 	  frictionX: .5,
 	  frictionY: .5,
 	  originX: 0,
@@ -304,9 +308,11 @@
 
 		// define movement of panels
 		var wipeAnimation = new TimelineMax()
-			.fromTo("panel1", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone})  // in from left
+			.fromTo(".panel1", 1, {y: "600%"}, {y: "0%", ease: Linear.easeNone})  // in from left
 			.fromTo(".panel2", 1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone})  // in from right
-			.fromTo("panel3", 1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
+			.fromTo(".panel3", 1, {y:  "100%"}, {y: "100%", ease: Linear.easeNone}) // in from top
+			
+		; 
 
 		// create scene to pin and link animation
 		new ScrollMagic.Scene({

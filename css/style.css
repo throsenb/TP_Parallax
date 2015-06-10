@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "antoniobold";
   font-style: normal;
@@ -19,20 +18,29 @@ h1, h2, h3 {
   font-family: "notera", cursive; }
 
 #homeHero {
-  background-image: url("../img/home/hero/trueparallel-hero-background.jpg");
-  background-image: url("../img/home/hero/trueparallel-hero-background.jpg");
+  background-image: url("../img/home/hero/trueparallel-hero.jpg");
+  background-image: url("../img/home/hero/trueparallel-hero.jpg");
   padding: 0;
   margin: -16px;
   background-repeat: no-repeat;
   background-size: cover;
   height: 80vh;
   overflow: hidden; }
+  #homeHero * h1, #homeHero h2, #homeHero h3 {
+    color: white; }
   #homeHero h1 {
     color: white; }
     #homeHero h1:nth-of-type(1) {
-      font-size: 70px; }
+      font-size: 77px;
+      margin-top: 80px;
+      margin-bottom: -18px;
+      margin-left: 2%; }
     #homeHero h1:nth-of-type(2) {
-      font-size: 60px; }
+      font-size: 60px;
+      margin-top: 0;
+      margin-left: 8%; }
+  #homeHero *.tagline {
+    width: inherit; }
 
 #logo {
   margin: 30px; }
@@ -44,17 +52,19 @@ h1, h2, h3 {
   margin-bottom: -50%;
   z-index: 99; }
 
-#logo-slider img:nth-child(2) {
-  margin-top: -60px; }
+#logo-slider {
+  margin-bottom: 5%;
+  margin-left: 5%; }
+  #logo-slider img:nth-child(1) {
+    margin-top: 60px;
+    margin-right: 30px; }
 
 #homeHeroXY {
   margin-top: -10%; }
   #homeHeroXY div:nth-child(1) {
-    margin-left: -5%;
-    width: 150%; }
+    margin-left: -5%; }
   #homeHeroXY div:nth-child(2) {
-    padding-top: 15%;
-    width: 50%; }
+    padding-top: 15%; }
     #homeHeroXY div:nth-child(2):nth-child(1) {
       display: none; }
   #homeHeroXY div:nth-child(3) {
@@ -64,17 +74,17 @@ h1, h2, h3 {
     #homeHeroXY #heroImage img {
       width: 100%; }
   #homeHeroXY #LogoPattern {
-    position: absolute;
-    margin-top: -150vh; }
-    #homeHeroXY #LogoPattern * .layer:nth-of-type(2) {
+    opacity: 0.5;
+    margin-top: -100vh; }
+    #homeHeroXY #LogoPattern .layer:nth-of-type(1) {
       display: none; }
 
 #homeHeroY-wrapper {
   margin-top: -75vh; }
 
 .arrows {
-  margin-top: -50vh;
-  top: 0 !important; }
+  margin-top: -40vh;
+  top: 100 !important; }
   .arrows #arrow1 {
     margin-top: 150px; }
   .arrows #arrow2 {

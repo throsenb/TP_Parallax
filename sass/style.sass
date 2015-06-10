@@ -28,20 +28,27 @@ h1,h2,h3
 //Hero
 #homeHero
 	// display: none
-	@include background-image(url("../img/home/hero/trueparallel-hero-background.jpg"))
+	@include background-image(url("../img/home/hero/trueparallel-hero.jpg"))
 	@include padding (0px 0px)
 	@include margin (-16px)
 	background-repeat: no-repeat
 	background-size: cover
 	height: 80vh
 	overflow: hidden
+	* h1, h2, h3
+		color: white 	
 	h1
 		color: white 
 		&:nth-of-type(1)
-			font-size: 70px
+			font-size: 77px
+			@include margin ( 80px null -18px 2% )
 		&:nth-of-type(2)
 			font-size: 60px			
+			@include margin ( 0px null null 8% )
 		// @include padding(6%  null 16% null)
+	*.tagline	
+		width: inherit
+
 #logo
 	@include margin (30px)
 
@@ -52,10 +59,12 @@ h1,h2,h3
 	@include margin(10%  null -50% null)
 	z-index: 99
 #logo-slider
+	@include margin ( null null 5% 5% )
 	img
-
-	img:nth-child(2)
-		@include margin ( -60px null null null null)
+		&:nth-child(1)
+			@include margin ( 60px 30px null null )
+		&:nth-child(2)
+			@include margin ( null null null null )
 
 
 // .logoSliding
@@ -81,11 +90,11 @@ h1,h2,h3
 	//Hero Image Computer					
 	div:nth-child(1)
 		@include margin(null null null -5%)
-		width: 150%	
+		// width: 100%	
 	//Patterns
 	div:nth-child(2)
 		@include padding(15%  null null null)
-		width: 50%	
+		// width: 50%	
 		&:nth-child(1)
 			display: none 
 	//Lines	
@@ -96,9 +105,10 @@ h1,h2,h3
 		img
 			width: 100%	
 	#LogoPattern
-		position: absolute
-		margin-top: -150vh
-		* .layer:nth-of-type(2) 
+		// position: absolute
+		opacity: .5
+		margin-top: -100vh
+		.layer:nth-of-type(1) 
 			display: none
 
 	.layer
@@ -112,8 +122,8 @@ h1,h2,h3
 
 
 .arrows
-	margin-top: -50vh
-	top: 00 !important
+	margin-top: -40vh
+	top: 100 !important
 	#arrow1
 		margin-top: $arrowOffset
 	#arrow2		

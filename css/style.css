@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "antoniobold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/antonio/antonio-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/antonio/antonio-bold-webfont.woff2") format("woff2"), url("fonts/antonio/antonio-bold-webfont.woff") format("woff"), url("fonts/antonio/antonio-bold-webfont.svg#antoniobold") format("svg"); }
+@font-face {
+  font-family: "notera";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/notera/notera-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/notera/notera-webfont.woff2") format("woff2"), url("fonts/notera/notera-webfont.woff") format("woff"), url("fonts/notera/notera-webfont.svg#notera") format("svg"); }
+body {
+  background-color: #ccc; }
+
+h1, h2, h3 {
+  font-family: "antoniobold", Helvetica, Arial, sans-serif; }
+
+.cursive {
+  font-family: "notera", cursive; }
+
+#homeHero {
+  background-image: url("../img/home/hero/trueparallel-hero-background.jpg");
+  background-image: url("../img/home/hero/trueparallel-hero-background.jpg");
+  padding: 0;
+  margin: -16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  overflow: hidden; }
+  #homeHero h1 {
+    color: white; }
+    #homeHero h1:nth-of-type(1) {
+      font-size: 70px; }
+    #homeHero h1:nth-of-type(2) {
+      font-size: 60px; }
+
+#logo {
+  margin: 30px; }
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin-top: 10%;
+  margin-bottom: -50%;
+  z-index: 99; }
+
+#logo-slider img:nth-child(2) {
+  margin-top: -60px; }
+
+#homeHeroXY {
+  margin-top: -10%; }
+  #homeHeroXY div:nth-child(1) {
+    margin-left: -5%;
+    width: 150%; }
+  #homeHeroXY div:nth-child(2) {
+    padding-top: 15%;
+    width: 50%; }
+    #homeHeroXY div:nth-child(2):nth-child(1) {
+      display: none; }
+  #homeHeroXY div:nth-child(3) {
+    padding-top: 45%; }
+  #homeHeroXY #heroImage {
+    position: absolute; }
+    #homeHeroXY #heroImage img {
+      width: 100%; }
+  #homeHeroXY #LogoPattern {
+    position: absolute;
+    margin-top: -150vh; }
+    #homeHeroXY #LogoPattern * .layer:nth-of-type(2) {
+      display: none; }
+
+#homeHeroY-wrapper {
+  margin-top: -75vh; }
+
+.arrows {
+  margin-top: -50vh;
+  top: 0 !important; }
+  .arrows #arrow1 {
+    margin-top: 150px; }
+  .arrows #arrow2 {
+    margin-bottom: -150px; }
+
+.zone2 {
+  position: relative;
+  z-index: 2; }
+
+#orangeBar {
+  border: solid white 1px; }
+
+#social-section {
+  background-color: white;
+  height: 200px;
+  position: relative;
+  z-index: 9; }
+
+footer {
+  min-height: 100px;
+  background-color: #6f6d6e; }
+
+/*# sourceMappingURL=style.css.map */

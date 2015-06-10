@@ -1,0 +1,159 @@
+@import "bourbon/bourbon" 
+
+// #Global
+// #Varibles 
+// 	-Heights
+$arrowOffset: 150px
+// 	-Colors 
+$base-orange: #ee7b3b
+$base-grey: #6f6d6e
+// 	-Fonts 
+@include font-face('antoniobold', "fonts/antonio/antonio-bold-webfont", $file-formats: eot woff2 woff truetype svg)
+@include font-face('notera', "fonts/notera/notera-webfont", $file-formats: eot woff2 woff truetype svg)
+
+
+$antoniobold: 'antoniobold', Helvetica, Arial, sans-serif
+$notera: 'notera', cursive
+// ## Hero ## 
+
+
+body
+	background-color: #ccc 
+h1,h2,h3
+	font-family: $antoniobold
+	
+.cursive 
+	font-family: $notera
+
+//Hero
+#homeHero
+	// display: none
+	@include background-image(url("../img/home/hero/trueparallel-hero-background.jpg"))
+	@include padding (0px 0px)
+	@include margin (-16px)
+	background-repeat: no-repeat
+	background-size: cover
+	height: 80vh
+	overflow: hidden
+	h1
+		color: white 
+		&:nth-of-type(1)
+			font-size: 70px
+		&:nth-of-type(2)
+			font-size: 60px			
+		// @include padding(6%  null 16% null)
+#logo
+	@include margin (30px)
+
+//Modal
+#modal
+	background-color: rgba(0,0,0,.5)
+	position: relative
+	@include margin(10%  null -50% null)
+	z-index: 99
+#logo-slider
+	img
+
+	img:nth-child(2)
+		@include margin ( -60px null null null null)
+
+
+// .logoSliding
+	@include animation-name(logoSliding)
+	@include animation-iteration-count(infinite)			
+	@include transition-timing-function(ease-in)
+	@include animation-duration(3s)
+	@include animation-direction(alternate-reverse)
+	@include keyframes(logoSliding) 
+		0% 
+			// float: left
+			@include margin (null null null 0%)
+		30% 
+			// float: right !important
+			@include margin (null null null 85%)
+		100% 
+			// float: right !important
+			@include margin (null null null 85%)
+
+
+#homeHeroXY
+	margin-top: -10%
+	//Hero Image Computer					
+	div:nth-child(1)
+		@include margin(null null null -5%)
+		width: 150%	
+	//Patterns
+	div:nth-child(2)
+		@include padding(15%  null null null)
+		width: 50%	
+		&:nth-child(1)
+			display: none 
+	//Lines	
+	div:nth-child(3)
+		@include padding(45% null null null)
+	#heroImage
+		position: absolute	
+		img
+			width: 100%	
+	#LogoPattern
+		position: absolute
+		margin-top: -150vh
+		* .layer:nth-of-type(2) 
+			display: none
+
+	.layer
+		// @include margin(-5%  null null null)
+			
+.layer
+		
+
+#homeHeroY-wrapper		
+	margin-top: -75vh
+
+
+.arrows
+	margin-top: -50vh
+	top: 00 !important
+	#arrow1
+		margin-top: $arrowOffset
+	#arrow2		
+		margin-bottom: -$arrowOffset
+
+.zone2
+	position: relative
+	z-index: 2	
+//Orange Section
+#orangeBar
+	border: solid white 1px
+	// background-color: lighten( $base-orange, 10%)
+	* h2
+
+#social-section
+	background-color: white
+	height: 200px
+	position: relative
+	z-index: 9	
+
+
+// Footer 
+footer
+	min-height: 100px 
+	background-color: $base-grey
+
+
+
+// Responsive Variables
+$screen-sm-min: 768px
+$screen-xs-max: ($screen-sm-min - 1)
+$screen-md-min: 992px
+$screen-sm-max: ($screen-md-min - 1)
+$screen-lg-min: 1200px
+$screen-md-max: ($screen-lg-min - 1)
+ 
+// Usage
+@media (max-width: $screen-xs-max)
+@media (min-width: $screen-sm-min) 
+@media (max-width: $screen-sm-max) 
+@media (min-width: $screen-md-min) 
+@media (max-width: $screen-md-max) 
+@media (min-width: $screen-lg-min) 

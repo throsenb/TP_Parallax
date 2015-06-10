@@ -1,5 +1,6 @@
 @import "bourbon/bourbon" 
 
+
 // #Global
 // #Varibles 
 // 	-Heights
@@ -47,7 +48,9 @@ h1,h2,h3
 			@include margin ( 0px null null 8% )
 		// @include padding(6%  null 16% null)
 	*.tagline	
-		width: inherit
+		width: 100%
+		position: absolute
+		@include margin(null null null 8% )
 
 #logo
 	@include margin (30px)
@@ -59,15 +62,16 @@ h1,h2,h3
 	@include margin(10%  null -50% null)
 	z-index: 99
 #logo-slider
-	@include margin ( null null 5% 5% )
+	@include margin ( 5% null 5% 5% )
 	img
 		&:nth-child(1)
 			@include margin ( 60px 30px null null )
 		&:nth-child(2)
 			@include margin ( null null null null )
+			position: absolute
 
 
-// .logoSliding
+.logoSliding
 	@include animation-name(logoSliding)
 	@include animation-iteration-count(infinite)			
 	@include transition-timing-function(ease-in)
@@ -79,10 +83,10 @@ h1,h2,h3
 			@include margin (null null null 0%)
 		30% 
 			// float: right !important
-			@include margin (null null null 85%)
+			@include margin (null null null 75%)
 		100% 
 			// float: right !important
-			@include margin (null null null 85%)
+			@include margin (null null null 75%)
 
 
 #homeHeroXY
@@ -108,8 +112,10 @@ h1,h2,h3
 		// position: absolute
 		opacity: .5
 		margin-top: -100vh
-		.layer:nth-of-type(1) 
-			display: none
+		* .layer
+			#one 
+			#two
+				margin-top: -20vh
 
 	.layer
 		// @include margin(-5%  null null null)
@@ -120,10 +126,12 @@ h1,h2,h3
 #homeHeroY-wrapper		
 	margin-top: -75vh
 
-
+#homeHeroY
+	div:nth-child(2)
+		background: #000
 .arrows
-	margin-top: -40vh
-	top: 100 !important
+	margin-top: -60vh
+	top: 200 !important
 	#arrow1
 		margin-top: $arrowOffset
 	#arrow2		

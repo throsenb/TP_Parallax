@@ -68,13 +68,15 @@
 				<div class="row panel1 zone2">
 					<div id="modal" class="col-md-8 col-md-offset-2 ">
 						<div id="logo-slider" class="pull-left">
-							<img src="img/blueBar.jpg">
-							<img src="img/orangeBar.jpg" class="logoSliding">
+							<img src="img/blueBar.jpg" class="pull-left">
+							<img src="img/orangeBar.jpg" class="logoSliding pull-left">
+								<div class="pull-left tagline">				
+									<h1 class="cursive ">Our Future</h1>
+									<h1 class="">Parallels Yours</h1>
+								</div>
+							
 						</div>			
-						<div class="pull-left tagline">				
-							<h1 class="cursive ">Our Future</h1>
-							<h1 class="">Parallels Yours</h1>
-						</div>
+				
 					</div>
 				</div>
 
@@ -89,12 +91,12 @@
 					<div id="LogoPattern">
 						<div class="col-xs-6">
 							<div class="layer" data-depth="1">
-								<img class="center-block" src="img/TP_pattern.png">
+								<img class="center-block" src="img/TP_pattern.png" id="one">
 							</div>						
 						</div>
 						<div class="col-xs-6">
-							<div class="layer" data-depth=".75">
-								<img class="center-block" src="img/TP_pattern.png">
+							<div class="layer" data-depth=".5">
+								<img class="center-block" src="img/TP_pattern.png" id="two">
 							</div>							
 						</div>
 					</div>		
@@ -287,11 +289,11 @@
 	  invertX: true,
 	  invertY: true,
 	  limitX: 0,
-	  limitY: 10,
+	  limitY: 50,
 	  scalarX: 40,
-	  scalarY: 10,
+	  scalarY: 50,
 	  frictionX: .5,
-	  frictionY: .5,
+	  frictionY: 1,
 	  originX: 0,
 	  originY: 0.5
 	});
@@ -308,10 +310,9 @@
 
 		// define movement of panels
 		var wipeAnimation = new TimelineMax()
-			.fromTo(".panel1", 1, {y: "600%"}, {y: "0%", ease: Linear.easeNone})  // in from left
+			// .fromTo(".panel1", 1, {y: "600%"}, {y: "0%", ease: Linear.easeNone})  // in from left
 			.fromTo(".panel2", 1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone})  // in from right
 			.fromTo(".panel3", 1, {y:  "100%"}, {y: "100%", ease: Linear.easeNone}) // in from top
-			
 		; 
 
 		// create scene to pin and link animation
@@ -330,7 +331,7 @@
 
     <!-- Boostrap -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
+	<script src="js/app.js"></script>
   </body>
 </html>
 

@@ -75,18 +75,21 @@ h1,h2,h3
 	@include animation-name(logoSliding)
 	@include animation-iteration-count(infinite)			
 	@include transition-timing-function(ease-in)
-	@include animation-duration(3s)
-	@include animation-direction(alternate-reverse)
+	@include animation-duration(4s)
+	@include animation-direction(normal)
 	@include keyframes(logoSliding) 
 		0% 
 			// float: left
 			@include margin (null null null 0%)
-		30% 
+		10% 
 			// float: right !important
 			@include margin (null null null 75%)
+		90% 
+			// float: right !important
+			@include margin (null null null 75%)			
 		100% 
 			// float: right !important
-			@include margin (null null null 75%)
+			@include margin (null null null 0%)
 
 
 #homeHeroXY

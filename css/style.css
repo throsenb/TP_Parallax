@@ -74,33 +74,39 @@ h1, h2, h3 {
   -webkit-transition-timing-function: ease-in;
   -moz-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-direction: alternate-reverse;
-  -moz-animation-direction: alternate-reverse;
-  animation-direction: alternate-reverse; }
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  animation-direction: normal; }
 @-webkit-keyframes logoSliding {
   0% {
     margin-left: 0; }
-  30% {
+  10% {
+    margin-left: 75%; }
+  90% {
     margin-left: 75%; }
   100% {
-    margin-left: 75%; } }
+    margin-left: 0; } }
 @-moz-keyframes logoSliding {
   0% {
     margin-left: 0; }
-  30% {
+  10% {
+    margin-left: 75%; }
+  90% {
     margin-left: 75%; }
   100% {
-    margin-left: 75%; } }
+    margin-left: 0; } }
 @keyframes logoSliding {
   0% {
     margin-left: 0; }
-  30% {
+  10% {
+    margin-left: 75%; }
+  90% {
     margin-left: 75%; }
   100% {
-    margin-left: 75%; } }
+    margin-left: 0; } }
 #homeHeroXY {
   margin-top: -10%; }
   #homeHeroXY div:nth-child(1) {

@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
 
@@ -27,6 +29,8 @@
 
 	<!-- Scripts -->
 	<script src="js/flowtype.js"></script>
+	<script src="js/jquery.fittext.js"></script>
+
 
 	<!-- Scroll Magic 	-->
  
@@ -52,59 +56,77 @@
   </head>
 <body id="pinContainer" >
 	<script>
-
-	var controller = new ScrollMagic.Controller();
+		var controller = new ScrollMagic.Controller();
 	</script>
 	<section  >
 		<div class="container-fluid" id="homeHero">
 			<div class="container">
-				<img src="img/trueparallel_logo.png" class="pull-left zone2" id="logo">
-				<div class="pull-right zone2">
-					<h3 class="">Are We On Your Parallel?</h3>
-					<img src="img/arrows.png">
-
-				</div>	
-
+				<div class="row">
+					<div class="col-xs-6">
+						<img src="img/trueparallel_logo.png" class="pull-left zone2" id="logo">
+					</div>	
+					<div class="col-xs-6">
+						<div class="zone2">
+							<h3 class="pull-right text-right"  id="menu-trigger">Are We On Your Parallel?</h3>
+							<img src="img/arrows.png" class="pull-right" id="menu-trigger-underline">
+			
+						</div>	
+					</div>	
+				</div>
 
 				<div class="row panel1 zone2">
 					<div id="modal" class="col-md-8 col-md-offset-2 ">
-						<div id="logo-slider" class="pull-left-nope">
-
-							<img src="img/blueBar.jpg" class="col-xs-1">
-								<div class="pull-left-nope tagline col-xs-10">				
-									<h1 class="cursive ">Our Future</h1>
-									<h1 class="">Parallels Yours</h1>
-							
-								</div>
-							<img src="img/orangeBar.jpg" class="logoSliding col-xs-1" id="logoOrange">	
-
-
-
-
-
-
-
+						<div id="logo-slider" class="row">
+							<div  class="col-xs-1">
+								<img src="img/blueBar.jpg" id="logoBlue">
+							</div>
+							<div class="tagline vcenter col-xs-10">				
+								<h1 class="cursive ">Our Future</h1>
+								<h1 class="">Parallels Yours</h1>
+							</div>
+								<img src="img/orangeBar.jpg" class="logoSliding" id="logoOrange">	
 						</div>			
+						<div class="row" id="services">
+							<p class="text-center center-block cursive">
+								Strategy /
+								Marketing /
+								Branding /
+								Web /
+								Mobile /
+								Social /
+								Apps /
+							</p>
+						</div>	
 					</div>
 				</div>
-
+				<div class="row zone2" id="contact">	
+					<h3 class="text-center" id="phone">919.747.4990</h3>
+					<p class="text-center">
+						<i class="fa fa-facebook"></i>
+						<i class="fa fa-twitter"></i>
+						<i class="fa fa-linkedin"></i>
+						<i class="fa fa-instagram"></i>
+					</p>	
+				</div>
 			</div>
 
 			<div class="row">	
 				<div id="homeHeroXY">
 					<div class="layer" data-depth=".2" id="heroImage">
-						<img class="center-block" src="img/home/hero/trueparallel-hero-crop.png">
+			
+							<img class="center-block navbar-fixed-bottom_" src="img/home/hero/trueparallel-hero-crop.png">
+					
 					</div>
 
 					<div id="LogoPattern">
 						<div class="col-xs-6">
 							<div class="layer" data-depth="1">
-								<img class="center-block" src="img/TP_pattern.png" id="one">
+								<img class="center-block" id="Logopattern1" src="img/TP_pattern.png" id="one">
 							</div>						
 						</div>
 						<div class="col-xs-6">
 							<div class="layer" data-depth=".5">
-								<img class="center-block" src="img/TP_pattern.png" id="two">
+								<img class="center-block" id="Logopattern2" src="img/TP_pattern.png" id="two">
 							</div>							
 						</div>
 					</div>		
@@ -317,11 +339,11 @@
 		var controller = new ScrollMagic.Controller();
 
 		// define movement of panels
-		var wipeAnimation = new TimelineMax()
-			// .fromTo(".panel1", 1, {y: "600%"}, {y: "0%", ease: Linear.easeNone})  // in from left
-			.fromTo(".panel2", 1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone})  // in from right
-			.fromTo(".panel3", 1, {y:  "100%"}, {y: "100%", ease: Linear.easeNone}) // in from top
-		; 
+		// var wipeAnimation = new TimelineMax()
+		// 	// .fromTo(".panel1", 1, {y: "600%"}, {y: "0%", ease: Linear.easeNone})  // in from left
+		// 	.fromTo(".panel2", 1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone})  // in from right
+		// 	.fromTo(".panel3", 1, {y:  "100%"}, {y: "100%", ease: Linear.easeNone}) // in from top
+		// ; 
 
 		// create scene to pin and link animation
 		new ScrollMagic.Scene({
@@ -336,6 +358,8 @@
 	});
 
 </script>
+
+
 
     <!-- Boostrap -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

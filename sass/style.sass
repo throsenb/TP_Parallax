@@ -8,6 +8,7 @@ $arrowOffset: 150px
 // 	-Colors 
 $base-orange: #ee7b3b
 $base-grey: #6f6d6e
+$base-blue: #254961
 // 	-Fonts 
 @include font-face('antoniobold', "fonts/antonio/antonio-bold-webfont", $file-formats: eot woff2 woff truetype svg)
 @include font-face('notera', "fonts/notera/notera-webfont", $file-formats: eot woff2 woff truetype svg)
@@ -26,80 +27,70 @@ h1,h2,h3
 .cursive 
 	font-family: $notera
 
+
+.vcenter
+	display: inline-block
+	vertical-align: middle
+	float: none
+//Top Nav
+#logo
+	@include margin (30px)
+	max-width: 200px 
+	width: 100%
+
 //Hero
 #homeHero
-	// display: none
+	min-height: 250px
+	max-height: 650px
+	clear: both
 	@include background-image(url("../img/home/hero/trueparallel-hero.jpg"))
 	@include padding (0px 0px)
 	@include margin (-16px)
 	background-repeat: no-repeat
 	background-size: cover
-	height: 80vh
 	overflow: hidden
 	* h1, h2, h3
 		color: white 	
 	h1
 		color: white 
 		&:nth-of-type(1)
-			font-size: 77px
 			@include margin ( 80px null -18px 2% )
 		&:nth-of-type(2)
-			font-size: 60px			
 			@include margin ( 0px null null 8% )
-		// @include padding(6%  null 16% null)
+		
 	*.tagline	
-		width: 100%
 		position: absolute
-		@include margin(null null null 8% )
-
-#logo
-	@include margin (30px)
-
+		@include margin(null null null 17% )
 //Modal
 #modal
 	background-color: rgba(0,0,0,.5)
 	position: relative
-	@include margin(10%  null -50% null)
+	@include margin(10%  null 10% null)
 	z-index: 99
 #logo-slider
-	@include margin ( 5% null 5% 5% )
-	img
-		&:nth-child(1)
-			@include margin ( 60px 30px null null )
-		&:nth-child(2)
-			@include margin ( null null null null )
-			position: absolute
+	@include margin ( 20px null null null )
+#services
+	p
+		color: #000 
+		font-family: $notera
+		font-size: 20px
+		// @include margin (null 10px)
+
+#contact
+	// margin-top: 50vh		
+	* i 
+		color: white	
+	#phone 
+		color: $base-blue
 
 
-// .logoSliding
-	@include animation-name(logoSliding)
-	@include animation-iteration-count(infinite)			
-	@include transition-timing-function(ease-in)
-	@include animation-duration(4s)
-	@include animation-direction(normal)
-	@include keyframes(logoSliding) 
-		0% 
-			// float: left
-			@include margin (null null null 0%)
-		10% 
-			// float: right !important
-			@include margin (null null null 75%)
-		90% 
-			// float: right !important
-			@include margin (null null null 75%)			
-		100% 
-			// float: right !important
-			@include margin (null null null 0%)
-// .open 
-// 	@include margin (null null null 75%)	
-// .close 			
-// 	@include margin (null null null 0%)
 
 #homeHeroXY
-	margin-top: -10%
+	// margin-top: -70vh
+
 	//Hero Image Computer					
 	div:nth-child(1)
-		@include margin(null null null -5%)
+		// @include margin(null null null -5%)
 		// width: 100%	
 	//Patterns
 	div:nth-child(2)
@@ -117,26 +108,23 @@ h1,h2,h3
 	#LogoPattern
 		// position: absolute
 		opacity: .5
-		margin-top: -100vh
+		// margin-top: -100vh
 		* .layer
 			#one 
 			#two
-				margin-top: -20vh
+				// margin-top: -20vh
 
-	.layer
-		// @include margin(-5%  null null null)
-			
-.layer
+
 		
 
 #homeHeroY-wrapper		
-	margin-top: -75vh
+	// margin-top: -75vh
 
 #homeHeroY
 	div:nth-child(2)
-		background: #000
+		// background: #000
 .arrows
-	margin-top: -60vh
+	// margin-top: -60vh
 	top: 200 !important
 	#arrow1
 		margin-top: $arrowOffset
@@ -167,17 +155,105 @@ footer
 
 
 // Responsive Variables
+$screen-xs-min: 0px
 $screen-sm-min: 768px
 $screen-xs-max: ($screen-sm-min - 1)
 $screen-md-min: 992px
 $screen-sm-max: ($screen-md-min - 1)
 $screen-lg-min: 1200px
 $screen-md-max: ($screen-lg-min - 1)
+$screen-xlg-min: 2000px
  
+
+$xs-hero-margin: -380px 
+$sm-hero-margin: -500px 
+$md-hero-margin: -600px 
+$lg-hero-margin: -700px 
+
 // Usage
+@media (min-width: $screen-xs-min)
+
+	#homeHero 
+		background-size: 200%
+		*.tagline
+			@include margin (30px null 30px 5%)
+			h1:nth-of-type(1)	
+				@include margin (0% null -2.5% null )
+	#heroImage
+		@include margin ($xs-hero-margin null null 0% )
+		min-width: 700px
+		width: 100%
+	#menu-trigger-underline
+		width: 60%
+	#Logopattern1, #Logopattern2
+		width: 100%
+	#LogoPattern
+		margin-top: $xs-hero-margin - 10px
+	.arrows
+		margin-top: -300px	
+	.arrows img 
+		width: 5px	
+	#modal 
+		@include margin (4% null 0px null)		
+	#logo-slider
+		@include margin (2% null null null)
+	#logoBlue	
+		@include margin ( 60px 20px 20px 2%) 
+	#logoOrange
+		@include margin (10px null null 10px)
+	#contact * i
+		font-size: 24px
+		margin: 0px 15px
+	#homeHeroY-wrapper
+		@include margin (-155px null 87px null)
+@media (max-width: $screen-xs-max)
+	#logo-slider
+		img
+			width: 5px
+	#homeHero 
+		*.tagline
+			// @include margin (null null null 0%)
+			h1:nth-of-type(1)
+				// @include margin (10% null -2.5% null)
+			h1:nth-of-type(2)						
+	#modal
+		@include margin (null 30px)			
+
 @media (max-width: $screen-xs-max)
 @media (min-width: $screen-sm-min) 
+	#logo-slider
+		img
+			width: 15px
+	#homeHeroXY 
+		margin-top: -100px
+	#homeHero 
+		background-size: 100%
+	#heroImage
+		width: 100%
+
+
+	#heroImage
+		@include margin ($sm-hero-margin null null 0% )
+	#LogoPattern
+		margin-top: $sm-hero-margin - 10px		
+
 @media (max-width: $screen-sm-max) 
-@media (min-width: $screen-md-min) 
+@media (min-width: $screen-md-min)
+	#heroImage
+		@include margin ($md-hero-margin null null 0% )
+	#LogoPattern
+		margin-top: $md-hero-margin - 200px	
+
+
 @media (max-width: $screen-md-max) 
-@media (min-width: $screen-lg-min) 
+@media (min-width: $screen-lg-min)
+
+	#heroImage
+		@include margin ($lg-hero-margin null null 0% )
+	#LogoPattern
+		margin-top: $lg-hero-margin - 250px	
+
+
+@media (min-width: $screen-xlg-min)
+	#LogoPattern
+		margin-top: -1407px

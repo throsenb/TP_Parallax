@@ -17,81 +17,76 @@ h1, h2, h3 {
 .cursive {
   font-family: "notera", cursive; }
 
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+
+#logo {
+  margin: 30px;
+  max-width: 200px;
+  width: 100%; }
+
 #homeHero {
+  min-height: 250px;
+  max-height: 650px;
+  clear: both;
   background-image: url("../img/home/hero/trueparallel-hero.jpg");
   background-image: url("../img/home/hero/trueparallel-hero.jpg");
   padding: 0;
   margin: -16px;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
   overflow: hidden; }
   #homeHero * h1, #homeHero h2, #homeHero h3 {
     color: white; }
   #homeHero h1 {
     color: white; }
     #homeHero h1:nth-of-type(1) {
-      font-size: 77px;
       margin-top: 80px;
       margin-bottom: -18px;
       margin-left: 2%; }
     #homeHero h1:nth-of-type(2) {
-      font-size: 60px;
       margin-top: 0;
       margin-left: 8%; }
   #homeHero *.tagline {
-    width: 100%;
     position: absolute;
-    margin-left: 8%; }
-
-#logo {
-  margin: 30px; }
+    margin-left: 17%; }
 
 #modal {
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
   margin-top: 10%;
-  margin-bottom: -50%;
+  margin-bottom: 10%;
   z-index: 99; }
 
 #logo-slider {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: 5%; }
-  #logo-slider img:nth-child(1) {
-    margin-top: 60px;
-    margin-right: 30px; }
-  #logo-slider img:nth-child(2) {
-    position: absolute; }
+  margin-top: 20px; }
 
-#homeHeroXY {
-  margin-top: -10%; }
-  #homeHeroXY div:nth-child(1) {
-    margin-left: -5%; }
-  #homeHeroXY div:nth-child(2) {
-    padding-top: 15%; }
-    #homeHeroXY div:nth-child(2):nth-child(1) {
-      display: none; }
-  #homeHeroXY div:nth-child(3) {
-    padding-top: 45%; }
-  #homeHeroXY #heroImage {
-    position: absolute; }
-    #homeHeroXY #heroImage img {
-      width: 100%; }
-  #homeHeroXY #LogoPattern {
-    opacity: 0.5;
-    margin-top: -100vh; }
-    #homeHeroXY #LogoPattern * .layer #two {
-      margin-top: -20vh; }
+#services p {
+  color: #000;
+  font-family: "notera", cursive;
+  font-size: 20px; }
 
-#homeHeroY-wrapper {
-  margin-top: -75vh; }
+#contact * i {
+  color: white; }
+#contact #phone {
+  color: #254961; }
 
-#homeHeroY div:nth-child(2) {
-  background: #000; }
+#homeHeroXY div:nth-child(2) {
+  padding-top: 15%; }
+  #homeHeroXY div:nth-child(2):nth-child(1) {
+    display: none; }
+#homeHeroXY div:nth-child(3) {
+  padding-top: 45%; }
+#homeHeroXY #heroImage {
+  position: absolute; }
+  #homeHeroXY #heroImage img {
+    width: 100%; }
+#homeHeroXY #LogoPattern {
+  opacity: 0.5; }
 
 .arrows {
-  margin-top: -60vh;
   top: 200 !important; }
   .arrows #arrow1 {
     margin-top: 150px; }
@@ -114,5 +109,102 @@ h1, h2, h3 {
 footer {
   min-height: 100px;
   background-color: #6f6d6e; }
+
+@media (min-width: 0px) {
+  #homeHero {
+    background-size: 200%; }
+    #homeHero *.tagline {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 5%; }
+      #homeHero *.tagline h1:nth-of-type(1) {
+        margin-top: 0;
+        margin-bottom: -2.5%; }
+
+  #heroImage {
+    margin-top: -380px;
+    margin-left: 0;
+    min-width: 700px;
+    width: 100%; }
+
+  #menu-trigger-underline {
+    width: 60%; }
+
+  #Logopattern1, #Logopattern2 {
+    width: 100%; }
+
+  #LogoPattern {
+    margin-top: -390px; }
+
+  .arrows {
+    margin-top: -300px; }
+
+  .arrows img {
+    width: 5px; }
+
+  #modal {
+    margin-top: 4%;
+    margin-bottom: 0; }
+
+  #logo-slider {
+    margin-top: 2%; }
+
+  #logoBlue {
+    margin: 60px 20px 20px 2%; }
+
+  #logoOrange {
+    margin-top: 10px;
+    margin-left: 10px; }
+
+  #contact * i {
+    font-size: 24px;
+    margin: 0px 15px; }
+
+  #homeHeroY-wrapper {
+    margin-top: -155px;
+    margin-bottom: 87px; } }
+@media (max-width: 767px) {
+  #logo-slider img {
+    width: 5px; }
+
+  #modal {
+    margin-right: 30px;
+    margin-left: 30px; } }
+@media (min-width: 768px) {
+  #logo-slider img {
+    width: 15px; }
+
+  #homeHeroXY {
+    margin-top: -100px; }
+
+  #homeHero {
+    background-size: 100%; }
+
+  #heroImage {
+    width: 100%; }
+
+  #heroImage {
+    margin-top: -500px;
+    margin-left: 0; }
+
+  #LogoPattern {
+    margin-top: -510px; } }
+@media (min-width: 992px) {
+  #heroImage {
+    margin-top: -600px;
+    margin-left: 0; }
+
+  #LogoPattern {
+    margin-top: -800px; } }
+@media (min-width: 1200px) {
+  #heroImage {
+    margin-top: -700px;
+    margin-left: 0; }
+
+  #LogoPattern {
+    margin-top: -950px; } }
+@media (min-width: 2000px) {
+  #LogoPattern {
+    margin-top: -1407px; } }
 
 /*# sourceMappingURL=style.css.map */
